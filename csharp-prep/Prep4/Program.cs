@@ -18,6 +18,12 @@ class Program
             Console.Write("Enter number: ");
             string userInput = Console.ReadLine();
             userNumber = int.Parse(userInput);
+
+            // only add the number to our list if number is not 0
+            if (userNumber != 0)
+            {
+                numbers.Add(userNumber);
+            }
         } while (userNumber != 0);
     }
 }
