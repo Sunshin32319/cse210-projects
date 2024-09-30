@@ -41,5 +41,17 @@ class Program
         // Console.WriteLine($"Loop counter: {count}.");
         float average = ((float)sumTotal) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
+
+        // Part 3 - find the max number in the list
+        // declare the variable
+        int max = numbers[0];
+        foreach (int number in numbers)
+        {
+            if (number > max)
+            {
+                max = number;
+            }
+        }
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
