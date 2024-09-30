@@ -5,25 +5,31 @@ class Program
     static void Main(string[] args)
     {
         int answer = 1;
-        Console.WriteLine("Guess a number! What is the number? ");
         string userGuess = Console.ReadLine();
-        int userNumber = int.Parse(userGuess);
+        int guess = int.Parse(userGuess);
 
-        if (answer < userNumber)
+        while (answer != guess)
         {
-            Console.WriteLine("Lower!");
-        }
-        else if (answer > userNumber)
-        {
-            Console.WriteLine("Higher!");
-        }
-        else if (answer == userNumber)
-        {
-            Console.WriteLine("You Guessed it! Congrats!");
-        }
-        else
-        {
-            Console.WriteLine("Uh oh! Something's not right. Try again later.");
+            Console.WriteLine("Guess a number! What is the number? ");
+
+            if (answer < guess)
+            {
+                Console.WriteLine("Lower!");
+            }
+            else if (answer > guess)
+            {
+                Console.WriteLine("Higher!");
+            }
+            else if (answer == guess)
+            {
+                Console.WriteLine("You guessed it! Great job!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Uh oh! Something's not right. Try again later.");
+                break;
+            }
         }
     }
 }
