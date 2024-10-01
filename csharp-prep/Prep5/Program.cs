@@ -9,9 +9,10 @@ class Program
         DisplayWelcomeMessage();
 
         // Declare userName variable and call function
-        string userName = promptUserName();
+        string userName = PromptUserName();
 
         // DisplayResult();
+        DisplayResult(userName);
     }
     // DisplayWelcomeMessage function body
     static void DisplayWelcomeMessage()
@@ -19,11 +20,19 @@ class Program
         Console.WriteLine("Welcome to the program!");
     }
     // PromptUserName function
-    static string promptUserName()
+    static string PromptUserName()
     {
         // prompt user name
-        Console.WriteLine("What is your name? ");
-        
-        // write user name
+        Console.Write("What is your name? ");
+        // store user name in variable
+        string userName = Console.ReadLine();
+
+        // return a value for this function or I get compiler error
+        return (userName);
+    }
+
+    static void DisplayResult(string userName)
+    {
+        Console.WriteLine($"{userName}");
     }
 }
