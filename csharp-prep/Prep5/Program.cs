@@ -11,6 +11,8 @@ class Program
         // Declare userName variable and call function
         string userName = PromptUserName();
 
+        int userNumber = PromptUserNumber();
+
         // DisplayResult();
         DisplayResult(userName);
     }
@@ -31,8 +33,17 @@ class Program
         return (userName);
     }
 
+    static int PromptUserNumber()
+    {
+        Console.Write("What is your favorite number? ");
+        string userInputNum = Console.ReadLine();
+        int userNumber = int.Parse(userInputNum);
+
+        return(userNumber);
+    }
+
     static void DisplayResult(string userName)
     {
-        Console.WriteLine($"{userName}");
+        Console.WriteLine($"{userName}, keep up the great work!");
     }
 }
