@@ -1,9 +1,17 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep5 World!");
+        DisplayWelcomeMessage();
+
+        // DisplayResult();
+    }
+    // DisplayWelcomeMessage function body
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
     }
 }
